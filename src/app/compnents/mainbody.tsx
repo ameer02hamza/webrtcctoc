@@ -5,10 +5,12 @@ function MainBody() {
         <section className='grid grid-cols-3 p-11 px-36'>
             <div className='relative col-span-2 rounded-md   bg-white'>
                 <div className="absolute  bg-black h-1/5 w-1/5 right-2 top-2 rounded-lg">
+                <Image className='w-full h-full object-cover rounded-md' height={100} width={100} src={"/p2.jpg"} alt='Avatar' />
 
                 </div>
                 <div className=' bg-green-500 rounded-md h-full'>
-
+                    <video className='h-full w-full rounded-md object-cover'
+                     src="https://www.w3schools.com/html/mov_bbb.mp4" autoPlay={true}></video>
                 </div>
             </div>
             <div className=' rounded-md  gap-2 flex flex-col items-center'>
