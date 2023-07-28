@@ -6,7 +6,8 @@ import SideBar from './compnents/sidebar'
 export default function Home() {
   return (
     <>
-    {/* <Header /> */}
+    <Header />
+    <SideBar />
      <MainBody />
     </>
 
