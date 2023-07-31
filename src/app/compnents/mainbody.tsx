@@ -21,7 +21,7 @@ function MainBody() {
     }, [getInboxState])
     return (
         <section className='grid grid-cols-3 px-20'>
-            { <div className={`${(!showVideo && isMobileView)?'hidden':'col-span-3'} md:relative ${showVideo?'md:col-span-3':'md:col-span-2'} ${showVideo?'md:h-[90vh]':''} md:w-full md:h-full md:rounded-md`}>
+            { <div className={`${(!showVideo && isMobileView)?'hidden':'col-span-3'} md:relative ${showVideo?'md:col-span-3':'md:col-span-2'} ${showVideo?'md:h-[85vh]':''} md:w-full md:h-full md:rounded-md`}>
                 <div className="absolute w-1/2 right-5 bg-black md:h-1/5 md:w-1/5 md:right-2 md:top-2 rounded-lg">
                     <video className='h-full w-full rounded-md object-cover'
                         src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" autoPlay loop muted></video>
@@ -62,7 +62,7 @@ function MainBody() {
                     </div>
                 </div>
             </div>}
-            {!showVideo?<div className={` md:rounded-md ${!showVideo?'col-span-3 w-[98vw]':'hidden'} ${(!showVideo && !isMobileView)?'md:col-span-1':'col-span-3 w-[98vw]'} md:gap-2 md:flex md:flex-col md:items-center md:h-full`}>
+            {!showVideo?<div className={` md:rounded-md ${(!showVideo && !isMobileView)?'md:col-span-1':'col-span-3 w-[98vw]'} md:gap-2 md:flex md:flex-col md:items-center md:h-full`}>
                 <div className="rounded-lg bg-blue-600 w-10/12 h-28 flex items-center gap-8">
                     <Image className='ml-5 h-10 w-10 rounded-full' height={100} width={100} src={"/ava.jpg"} alt='Avatar' />
                     <div>
