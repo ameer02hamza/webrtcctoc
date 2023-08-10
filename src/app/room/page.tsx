@@ -1,21 +1,12 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation';
-import { io } from 'socket.io-client';
+import { connectToServer } from '@/helpers/callroom';
+
 function Room() {
-  let connectSocketTest = () => {
-    console.log(`%c connectSocketTest`, 'background: #008000; color: #fff');
-
-    let socket = io("https://p2p.mirotalk.com/", { transports: ['websocket'] })
-    socket.connect()
-    socket.on('connect', () => {
-      console.log(`%c Socket Connected`, 'background: #008000; color: #fff');
-
-    });
-  }
   const router = useRouter()
   const navigateToCall = () => {
-    router.push('/');
+    router.push('/permission');
   }
   const [roomName, setRoomName] = useState("")
   let generateRandomString = (length: number) => {
@@ -26,13 +17,10 @@ function Room() {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
     }
     setRoomName(result);
-    return result;
   }
   useEffect(() => {
-    connectSocketTest();
-    let randomString = generateRandomString(40);
-    console.log(`%c Random String ${randomString}`, 'background: #008000; color: #fff');
-
+    connectToServer()
+    generateRandomString(40);
   }, []);
   return (
     <div className="h-screen flex justify-center  items-center">
