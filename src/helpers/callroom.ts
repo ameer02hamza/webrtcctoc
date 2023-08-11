@@ -5,7 +5,7 @@ export let remoteMediaStream: MediaStream;
 let isAudioEnabled: boolean = true;
 let isVideoEnabled: boolean = true;
 let peerConnection = null;
-let socket = io(process.env.SOCKET_URI!, { transports: ['websocket'] });
+let socket = io(process.env.SOCKET_URI, { transports: ['websocket'] });
 let userAgent: string;
 let peerConnections: any = {};
 let allPeers: any;
