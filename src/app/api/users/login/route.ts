@@ -31,7 +31,7 @@ export const POST = async (request: NextRequest) =>{
             token:token,
             sucess: true,
         })
-        response.cookies.set("token", token , {httpOnly:true, path:"/"})
+        response.cookies.set("token", token , {httpOnly:true})
         return response;
     } catch (error) {
         
