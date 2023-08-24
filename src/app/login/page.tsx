@@ -19,15 +19,15 @@ function Login() {
         }
     }, [user])
     const onLogin = async () => {
-
         try {
             const resp = await axios.post("/api/users/login", user);
             console.log(`%c response`, 'background: #008000; color: #fff');
-            console.log(resp.data);
+            console.log(resp.data.message);
             // router.push("/login")
-            toast.success('Successfully logged In!')
-        } catch (error) {
-            toast.error('Invalid email or password!')
+            toast.success(resp.data.message)
+        } catch (error:any) {
+            console.log(error);
+            toast.error(error.message)
         }
     }
     return (

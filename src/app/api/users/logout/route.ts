@@ -1,17 +1,17 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server"
 
-export const GET =(request:NextRequest) =>{
+export const GET =async () =>{
     try {
         const response = NextResponse.json({
-            message:"Success fully logged out",
-            status:200
+            message:"Logout successfully",
+            sucess:true
+        })
+        response.cookies.set("token","",{
+            httpOnly:true,expires:new Date(0)
         });
-        response.cookies.set("token","", {httpOnly:true})
-        return response
-    } catch (error) {
-        const response = NextResponse.json({
-            message:"Failed to logged out",
-            status:400
-        });
+        return response;
+    } catch (error:any) {
+        return NextResponse.json({error:error.message},
+            {status:400});
     }
 }

@@ -1,28 +1,25 @@
 "use client"
-import axios from 'axios';
 import React from 'react'
-import toast, { Toaster } from 'react-hot-toast';
-
+import axios from 'axios';
+import { toast, Toaster } from 'react-hot-toast';
+import { useRouter } from 'next/navigation';
 function Profile() {
-    const onLogout= async () => {
-
-        try {
-            const resp = await axios.get("/api/users/logout");
-            console.log(`%c response`, 'background: #008000; color: #fff');
-            console.log(resp.data);
-            // router.push("/login")
-            toast.success('Successfully logged out!')
-        } catch (error) {
-            toast.error('Failed to logout')
-        }
+    const router  =useRouter();
+    const logout =async ()=>{
+            const resp:any = await axios.get("/api/users/logout");
+            toast.success('Successfully logged out!');
+            router.push("/login");
     }
   return (
-    <div className='grid place-items-center h-screen'>
-        <button onClick={onLogout} className='bg-purple text-white border-2 rounded bg-purple-700 '>
-            Logout
+    <div className='grid'>
+        <button onClick={logout} className='border-2'>
+            logout
         </button>
-        <Toaster
-         position='top-center' />
+      <h1>Profile my id</h1>
+      <Toaster
+                position="top-right"
+                reverseOrder={false}
+            />
     </div>
   )
 }

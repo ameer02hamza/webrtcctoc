@@ -6,7 +6,8 @@ import jwt from "jsonwebtoken"
 connect();
 
 export const POST = async (request: NextRequest) =>{
-
+        console.log("POST request");
+        
     try {
         const reqBody = await request.json();
         const {email, password} = reqBody;
@@ -34,7 +35,11 @@ export const POST = async (request: NextRequest) =>{
         response.cookies.set("token", token , {httpOnly:true})
         return response;
     } catch (error) {
-        
+        const response =  NextResponse.json({
+            message: "Failed to get reesponse",
+            token:"",
+            sucess: false,
+        })
     }
     
 }

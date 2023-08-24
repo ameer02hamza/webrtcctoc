@@ -1,0 +1,225 @@
+/* --bgcolor: "sandybrown"; */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed);
+
+/* * {
+ 
+} */
+
+/* body {
+  padding: 50px;
+  background: sandybrown;
+} */
+
+/* .mug {
+  position: relative;
+  height: 300px;
+  width: 250px;
+  margin: auto;
+  padding-top: 100px;
+  background: linear-gradient(right, #ddd 0, white 100%);
+  background-color: white;
+  border-top-left-radius: 125px 50px;
+  border-top-right-radius: 125px 50px;
+}
+
+.mug:before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 250px;
+  bottom: -50px;
+  border-radius: 50%;
+  background: linear-gradient(right, #ddd 0, white 100%);
+  background-color: white;
+}
+
+.mug:after {
+  content: "";
+  position: absolute;
+  height: 70px;
+  width: 220px;
+  top: 10px;
+  left: 15px;
+  border-radius: 50%;
+  background: linear-gradient(top, #eee 0, rgb(3, 1, 1) 100%);
+  box-shadow: 0 0 15px #d50f0f;
+} */
+
+.handle {
+  /* position: absolute;
+  height: 200px;
+  width: 120px;
+  top: 70px;
+  left: -120px;
+  border-top-left-radius: 75px 100px;
+  border-bottom-left-radius: 75px 100px;
+  border-top-right-radius: 50% 20px;
+  border-bottom-right-radius: 50% 20px;
+  background: linear-gradient(right, #eee 0, white 100%);
+  background-color: white; */
+}
+
+.handle:after {
+  /* content: "";
+  position: absolute;
+  height: 140px;
+  width: 90px;
+  top: 30px;
+  right: 0;
+  border-top-left-radius: 45px 70px;
+  border-bottom-left-radius: 45px 70px;
+  border-top-right-radius: 45px 35px;
+  border-bottom-right-radius: 45px 35px;
+  background: transparent;
+  box-shadow: -5px 10px 20px #ccc; */
+}
+.teacupcontainer {
+  position: relative;
+}
+.teacup {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to right, #080808, #5b5656);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.cuphandle {
+  position: absolute;
+  top: 25px;
+  right: -75px;
+  height: 120px;
+  width: 160px;
+  border-radius: 50%;
+  border: 20px solid #524e4e;
+  border-left: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  transform: rotate(45deg);
+}
+.topshape {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background: linear-gradient(to right, #fdfdfd, #ede5e5);
+  border-radius: 50%;
+}
+.circle {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  height: 50px;
+  width: calc(100% - 20px);
+  background: linear-gradient(to left, #fdfdfd, #ededed);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.tea {
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  background: linear-gradient(to left, #eb7b1b, #ffb370);
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  animation: tea-move 3s linear infinite alternate;
+}
+@keyframes tea-move {
+  0% {
+    transform: scale(0, 0);
+  }
+  20% {
+    transform: scale(1.1, 1.1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1.1, 1.1);
+  }
+}
+.cupplatte {
+  position: absolute;
+  left: -100px;
+  bottom: -40px;
+  background: linear-gradient(to left, #ede0e0, #ffffff);
+  box-shadow: 2px 2px 20px #f0e5e529;
+  width: 500px;
+  height: 200px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.cupplatte::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background: linear-gradient(to left, #e7e7e7, #efeaea);
+  border-radius: 50%;
+  border: 2px dotted #fcaa61;
+}
+.cupplatte::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: 15px;
+  left: 15px;
+  right: 30px;
+  background: radial-gradient(#66666666 30%, transparent, transparent);
+  border-radius: 50%;
+}
+
+.anim svg{
+  animation: example 30s linear infinite;
+}
+@keyframes example {
+  0%   {transform: translateY(1rem);}
+  
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+.teasmoke {
+  /* position: relative;
+  z-index: 1;
+  padding: 0 30px;
+  display: flex; */
+}
+.teasmoke span {
+  /* width: 2px;
+  height: 100px;
+  background: linear-gradient(to left, #d4d4d429, #f7e0cca3);
+  display: block;
+  border-radius: 50%; */
+  animation: spear-smoke 5s linear infinite;
+  opacity: 0;
+  /* filter: blur(8px);
+  padding: 0 10px; */
+  /* animation-delay: calc(var(--i) * -0.5s); */
+}
+
+@keyframes spear-smoke {
+  0% {
+    transform: translateY(-40px) scaleX(1);
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100px) scaleX(4);
+    background: linear-gradient(to left, #ffffff29, rgba(233, 202, 182, 0.64));
+  }
+  80% {
+    transform: translateY(-180px) scaleX(6);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-300px) scaleX(8);
+  }
+}
