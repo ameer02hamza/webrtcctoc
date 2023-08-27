@@ -47,7 +47,29 @@ function ProfileById() {
           </div>
         </div>
       </div>
+      <div className={`relative  h-80 w-80  ${styles.p3d}`}>
+        <span>
+        </span>
+        <span >
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
 
+        </span>
+      </div>
 
     </div>
 
